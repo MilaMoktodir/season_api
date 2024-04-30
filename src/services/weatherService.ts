@@ -9,6 +9,8 @@ export const generateLondonWeatherData = (): WeatherData => {
     humidity: faker.number.int({ min: 79, max: 86 }),
     wind: faker.number.int({ min: 2, max: 78 }),
     rain: faker.number.int({ min: 65, max: 75 }),
+
+    
   };
 
 storeWeatherData(generatedWeatherData).catch(console.error);
