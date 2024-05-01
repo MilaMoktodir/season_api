@@ -12,7 +12,7 @@ import { validationResult } from "express-validator";
  * @param req the request object
  * @param res the response object
  */
-export const getAllSeasonData = async (req: Request, res: Response) => {
+export const getSeasonData = async (req: Request, res: Response) => {
   // We will use the validationResult function to check if there are any validation errors
   const errors = validationResult(req);
 
