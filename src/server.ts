@@ -1,5 +1,4 @@
 import express from "express";
-import weatherRoute from "./routes/weatherRoute.js";
 import seasonRoute from "./routes/seasonRoute.js";
 import cors from "cors";
 
@@ -13,7 +12,6 @@ app.use(express.json());
 app.use(cors());
 
 // We define our first route
-app.use("/api/weather", weatherRoute);
 
 app.use("/api/season", seasonRoute);
 
