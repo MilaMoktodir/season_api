@@ -1,7 +1,9 @@
 import { Request, Response } from "express";
 import {
   
-  generateLondonSeasonData,
+  generateLondonSeasonData, 
+  generateDublinSeasonData,  
+  generateTokyoSeasonData,
 } from "../services/seasonService.js";
 import { validationResult } from "express-validator";
 
@@ -10,7 +12,7 @@ import { validationResult } from "express-validator";
  * @param req the request object
  * @param res the response object
  */
-export const getSeasonData = async (req: Request, res: Response) => {
+export const getAllSeasonData = async (req: Request, res: Response) => {
   // We will use the validationResult function to check if there are any validation errors
   const errors = validationResult(req);
 
@@ -35,10 +37,10 @@ export const getSeasonData = async (req: Request, res: Response) => {
       console.log(generateLondonSeasonData());
       finalSeasonData = generateLondonSeasonData();
     } else if (city === "dublin") {
-      finalSeasonData = generateLondonSeasonData();
+      finalSeasonData = generateDublinSeasonData();
     }
       else if (city === "tokyo") {
-        finalSeasonData = generateLondonSeasonData();
+        finalSeasonData = generateTokyoSeasonData();
     } else {
       // If the city is not london or dublin or tokyo, we will throw an error
       res.status(404).send("City not found");
