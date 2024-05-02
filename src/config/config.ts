@@ -5,7 +5,7 @@ const server: string = "http://localhost";
 const port: string = "4001";
 
 const mnemonic: string =
-"coil file riot rug buyer exclude birth lazy require satoshi change chef chapter shield throw purpose lecture since reunion box cube health lecture absorb knock";
+"giraffe stage setup decade sure nut aunt blade draw brass antique hint surprise equip reveal lottery stuff magic crime modify name useful kingdom above cereal";
 
 export function getClient(): algosdk.Algodv2 {
     let client = new algosdk.Algodv2(algodToken, server, port);
