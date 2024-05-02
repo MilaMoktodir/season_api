@@ -16,7 +16,7 @@ import { getClient, getAccount } from "../config/config.js";
                 amount: 1000, // Minimum amount
                 note: note,
                 suggestedParams: suggestedParams,
-            });
+            })
     
             const signedTxn = txn.signTxn(account.sk);
             const sendTxn = await client.sendRawTransaction(signedTxn).do();
