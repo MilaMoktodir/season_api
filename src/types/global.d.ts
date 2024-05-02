@@ -1,5 +1,3 @@
-
-
 interface SeasonData {
   city:string;
   season:string;
